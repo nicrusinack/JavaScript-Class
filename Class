@@ -1,0 +1,55 @@
+/*
+  Arrays are lists of values and can contain strings,
+  integers, booleans, and even other arrays.
+*/
+ 
+// To create an array, use square brackets and comma separated values
+var fruits = ['apple', 'orange', 'banana'];
+ 
+// You don't have to add anything to your array when you define it, it can be empty
+var veggies = [];
+ 
+ 
+// To add items to an array, use the push() method
+fruits.push('kiwi');
+console.log( fruits ); // ['apple', 'orange', 'banana', 'kiwi']
+ 
+veggies.push('carrot');
+console.log( veggies ); // ['carrot']
+ 
+// You can also add multiple items at a time
+veggies.push('peas', 'corn');
+console.log( veggies ); // ['carrot', 'peas', 'corn']
+ 
+ 
+// To get the value of an item in an array, use square brackes and the item's index number
+// NOTE: Index numbers start at zero in computer prgramming, a.k.a. "zero index"
+console.log( fruits[0] ); // 'apple'
+console.log( veggies[2] ); // 'corn'
+ 
+ 
+// If you want to sort an array alphabetically, use the sort() method
+veggies.sort();
+console.log( veggies ); // ['carrot', 'corn', 'peas']
+ 
+ 
+// To combine arrays, use the concat() method
+var foods = fruits.concat( veggies );
+console.log( foods ); // ['apple', 'orange', 'banana', 'kiwi', 'carrot', 'corn', 'peas']
+ 
+ 
+// To find out how many items are in an array, check its length property
+console.log( foods.length ); // 7
+ 
+ 
+// To convert an array to a string, use the join() method
+console.log( veggies.join() ); // 'carrot,corn,peas'
+ 
+// You can specify how the values should be joined
+console.log( veggies.join(" - ") ); // 'carrot - corn - peas'
+ 
+ 
+// Conversely, to convert a string back to an array, use the split() method
+var veggieString = 'carrot,corn,peas';
+var veggieArray = veggieString.split(',');
+console.log( veggieArray ); // ['carrot', 'corn', 'peas']
